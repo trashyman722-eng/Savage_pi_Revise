@@ -1,0 +1,49 @@
+{
+  "name": "savage-pi",
+  "version": "2.0.0",
+  "description": "SAVAGE Framework - Raspberry Pi Zero 2 W Embedded Edition",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/main.js",
+    "dev": "ts-node src/main.ts",
+    "watch": "tsc --watch",
+    "db:migrate": "node dist/database/migrate.js",
+    "db:seed": "node dist/database/seed.js",
+    "install:service": "bash scripts/install.sh",
+    "logs": "journalctl -u savage-framework.service -f"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "ws": "^8.15.0",
+    "sqlite3": "^5.1.7",
+    "onoff": "^6.0.3",
+    "i2c-bus": "^5.2.3",
+    "serialport": "^12.0.0",
+    "axios": "^1.6.0",
+    "date-fns": "^2.30.0",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/express": "^4.17.21",
+    "@types/ws": "^8.5.10",
+    "@types/lodash": "^4.14.202",
+    "typescript": "^5.3.3",
+    "ts-node": "^10.9.2"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "keywords": [
+    "cybersecurity",
+    "pentesting",
+    "raspberry-pi",
+    "embedded",
+    "wifi",
+    "nfc",
+    "rfid"
+  ],
+  "author": "SAVAGE Framework Team",
+  "license": "MIT"
+}

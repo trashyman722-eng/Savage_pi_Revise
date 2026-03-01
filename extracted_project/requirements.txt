@@ -1,0 +1,60 @@
+# SAVAGE Framework - Python Dependencies
+# Install with: pip install -r requirements.txt
+
+# Core System Utilities
+psutil==5.9.5
+python-dotenv==0.21.0
+
+# Networking & Security Tools
+scapy==2.5.0
+paramiko==3.3.1
+requests==2.31.0
+urllib3==2.0.7
+
+# Wireless & Wi-Fi Tools
+pwnagotchi-plugins==1.0.0
+bettercap-python==0.0.1
+
+# RFID & Hardware
+pyserial==3.5
+smbus-cffi==0.5.1
+RPi.GPIO==0.7.0
+adafruit-circuitpython-pn532==1.4.5
+adafruit-circuitpython-busdevice==5.2.3
+
+# Display & UI
+Pillow==10.0.1
+RPi.bme280==0.2.4
+
+# Database & ORM
+sqlalchemy==2.0.23
+pymysql==1.1.0
+
+# Cryptography & Hashing
+pycryptodome==3.18.0
+hashcat==6.2.6
+
+# Data Processing
+pandas==2.1.2
+numpy==1.24.3
+
+# API & Web
+fastapi==0.104.1
+uvicorn==0.24.0
+websockets==12.0
+aiohttp==3.9.1
+
+# Logging & Monitoring
+loguru==0.7.2
+
+# Testing
+pytest==7.4.3
+pytest-asyncio==0.21.1
+
+# Development Tools
+black==23.11.0
+flake8==6.1.0
+mypy==1.7.0
+
+# Optional: GPU Acceleration (for Hashcat)
+# pycuda==2022.2.2

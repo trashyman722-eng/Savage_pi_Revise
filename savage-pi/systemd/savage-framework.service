@@ -1,0 +1,35 @@
+[Unit]
+Description=SAVAGE Framework - Raspberry Pi Zero 2 W Embedded Edition
+After=network.target multi-user.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+Group=root
+WorkingDirectory=/opt/savage-pi
+ExecStart=/usr/bin/node /opt/savage-pi/dist/main.js
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=savage-framework
+
+# Resource limits
+MemoryLimit=300M
+MemorySwap=0
+CPUQuota=80%
+
+# Security
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/savage-pi/data
+
+# Environment
+NODE_ENV=production
+NODE_OPTIONS="--max-old-space-size=256"
+
+[Install]
+WantedBy=multi-user.target
